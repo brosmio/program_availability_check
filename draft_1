@@ -1,1 +1,14 @@
-
+'se firm_delivery > lead_time
+    'n_lead_time = firm_delivery (data) + 7 dias
+    'next_delivery
+    'i = firm_delivery
+    'while i <= firm_delivery
+        'se cells(i,5).value = shipnt ou schlne
+            cell_check
+            'se cell_check >= 0
+                'se cell_check >= 0 em next_delivery
+                'next_delivery = i
+                'se nao
+    i = i - 1
+    'Wend
+    'se cell_check < 0 em 
