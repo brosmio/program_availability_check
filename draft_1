@@ -1,14 +1,21 @@
 'se firm_delivery > lead_time
     'n_lead_time = firm_delivery (data) + 7 dias
     'next_delivery
+    'aux = 0
     'i = firm_delivery
-    'while i <= firm_delivery
-        'se cells(i,5).value = shipnt ou schlne
+    'while i <= firm_delivery and i > 25
+        'se cells(i,5).value = shipnt ou schlne ou oi-sl
             cell_check
             'se cell_check >= 0
-                'se cell_check >= 0 em next_delivery
-                'next_delivery = i
-                'se nao
-    i = i - 1
+                'aux = i
+            'se cell_check < 0
+                'checar consumos antes do aux
+                'se nao houver disponivel no periodo
+                    'se i = firm_delivery
+                        'passar o n_lead_time
+                    'else
+                        'passar o aux
+        'i = i - 1
+        'se i = 24
+            em estoque
     'Wend
-    'se cell_check < 0 em 
